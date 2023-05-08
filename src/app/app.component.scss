@@ -5,6 +5,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  &.side-template {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+  }
 }
 
 .result-wrapper {

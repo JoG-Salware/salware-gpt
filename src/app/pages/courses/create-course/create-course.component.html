@@ -1,0 +1,14 @@
+
+
+<div class="course-topic-wrapper">
+  <h3>{{subject}}</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let course of courses">{{ course.name }}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list> 
+  <button mat-raised-button color="primary" type="submit" [disabled]="courses.length === 0" (click)="saveCurrentGeneratedCourse()">Guardar</button>
+</div>
+<div class="controls-wrapper">
+  <app-specification-controls (onControlsFormSubmit)="queryPrompt($event)"></app-specification-controls>
+</div>
+

@@ -1,0 +1,19 @@
+<form [formGroup]="controlsForm" (ngSubmit)="onFormSubmit()">
+  <div class="fields-wrapper">
+    <mat-form-field>
+      <mat-label>Topico o Tema</mat-label>
+      <input matInput placeholder="Ej. Matematicas" formControlName="subject">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Cantidad de Items</mat-label>
+      <input matInput type="number" formControlName="itemQuantity">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Elige un nivel educacional</mat-label>
+      <select matNativeControl>
+        <option value={{educationalLevel}} *ngFor="let educationalLevel of educationalLevels">{{educationalLevel}}</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!controlsForm.valid">Enviar</button>
+</form>

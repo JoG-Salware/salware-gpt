@@ -1,0 +1,44 @@
+:host {
+  .empty-state-action {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .not-empty-state-action {
+    padding: 0 100px;
+    height: 100vh;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .course-card {
+    max-width: 250px;
+    background: white;
+    &.course-card-add {
+      .course-card-name-display {
+        background: white;
+        border: 2px solid grey;
+        color: grey;
+      }
+    }
+    .course-card-name-display {
+      background: linear-gradient(30deg, rgb(16, 10, 104), #0b0746fb);
+      border-radius: 5px;
+      color: white;
+      font-weight: bolder;
+      padding: 16px 6px;
+      p {
+        font-size: 16px;
+      }
+      span {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5)
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

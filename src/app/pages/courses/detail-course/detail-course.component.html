@@ -1,0 +1,13 @@
+<div *ngIf="course !== null" class="course-detail-wrapper">
+  <h2>{{course.name}}</h2>
+  <mat-chip-listbox aria-label="Subjects">
+    <mat-chip *ngFor="let subject of course.subjects">
+      {{ subject.name }}
+    </mat-chip>
+  </mat-chip-listbox>
+  <div>
+    <p *ngIf="course.summary !== undefined" class="course-summary">{{ course.summary }}</p>
+    <button mat-raised-button color="primary" type="submit" *ngIf="course.summary === undefined" (click)="createCourseSummary()">Generar Resumen de Curso</button>
+    <button mat-raised-button color="primary" type="submit" *ngIf="isDiff" (click)="saveCourse()">Guardar</button>
+  </div>
+</div>

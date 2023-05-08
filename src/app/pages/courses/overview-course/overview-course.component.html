@@ -1,0 +1,20 @@
+<div class="overview-course-wrapper">
+  <div class="empty-state-action" *ngIf="courses.length === 0">
+    <p>Todavia no tienes ningun curso en este editor</p>
+    <button mat-raised-button color="primary" (click)="goToCreateCourse()">Agregar Nuevo Curso</button>
+  </div>
+  <div class="not-empty-state-action" *ngIf="courses.length !== 0">
+    <div class="course-card" *ngFor="let course of courses" (click)="goToDetailCourse(course.id)">
+      <div class="course-card-name-display">
+        <p>{{ course.name }}</p>
+        <span>{{ course.id }}</span>
+      </div>
+    </div>
+    <div class="course-card course-card-add" (click)="goToCreateCourse()">
+      <div class="course-card-name-display">
+        <p>Agregar nuevo curso</p>
+        <!-- <span>{{ course.id }}</span> -->
+      </div>
+    </div>
+  </div>
+</div>

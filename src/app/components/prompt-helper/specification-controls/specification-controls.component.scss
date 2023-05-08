@@ -1,0 +1,12 @@
+.default-controls {
+  .fields-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-gap: 10px;
+  }
+}
+
+.sidebar-controls {
+  display: flex;
+  flex-direction: column;
+}
